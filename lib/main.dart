@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(
-                  left: 16.0, right: 16.0, top: 45.0, bottom: 12.0),
+                  left: 16.0, right: 16.0, top: 30.0, bottom: 12.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -216,7 +216,7 @@ class _MyAppState extends State<MyApp> {
                     Icons.favorite_border,
                     color: Colors.white,
                   ),
-                  title: Text("Home", style: bottomBarStyle)),
+                  title: Text("Favorite", style: bottomBarStyle)),
               BubbleBottomBarItem(
                   backgroundColor: Colors.black,
                   icon: Icon(Icons.person, color: Colors.black),
@@ -224,7 +224,7 @@ class _MyAppState extends State<MyApp> {
                     Icons.person,
                     color: Colors.white,
                   ),
-                  title: Text("Home", style: bottomBarStyle))
+                  title: Text("Profile", style: bottomBarStyle))
             ],
           )),
     );
