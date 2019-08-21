@@ -42,14 +42,12 @@ class _MyAppState extends State<MyApp> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(
-                  left: 16.0, right: 16.0, top: 30.0, bottom: 12.0),
+              padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 30.0, bottom: 12.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   IconButton(iconSize: 34, icon: Icon(Icons.subject), onPressed: () {}),
-                  IconButton(iconSize: 34,
-                      icon: Icon(Icons.local_grocery_store), onPressed: () {}),
+                  IconButton(iconSize: 34, icon: Icon(Icons.local_grocery_store), onPressed: () {}),
                 ],
               ),
             ),
@@ -70,12 +68,7 @@ class _MyAppState extends State<MyApp> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8.0),
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 30,
-                      color: Colors.black.withOpacity(.12),
-                      offset: Offset(0, 10))
-                ],
+                boxShadow: [BoxShadow(blurRadius: 30, color: Colors.black.withOpacity(.12), offset: Offset(0, 10))],
               ),
               child: Center(
                 child: Padding(
@@ -110,16 +103,14 @@ class _MyAppState extends State<MyApp> {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     var product = products[index];
-                    return ProductCard(
-                        imgUrl: product.image,
-                        name: product.title,
-                        color: product.color);
+                    return ProductCard(imgUrl: product.image, name: product.title, color: product.color);
                   }),
             ),
             Container(
               width: double.infinity,
               height: 160,
               margin: EdgeInsets.symmetric(horizontal: 22),
+//              color: Colors.amber,
               child: Stack(
                 children: <Widget>[
                   Padding(
@@ -132,20 +123,14 @@ class _MyAppState extends State<MyApp> {
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Padding(
-                        padding:
-                            EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                        padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
                         child: Container(
                           height: 100,
                           width: double.infinity,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.black12,
-                                    offset: Offset(0, 6),
-                                    blurRadius: 6)
-                              ]),
+                              boxShadow: [BoxShadow(color: Colors.black12, offset: Offset(0, 6), blurRadius: 6)]),
                           child: Padding(
                             padding: EdgeInsets.only(left: 22, top: 16),
                             child: Column(
@@ -226,7 +211,8 @@ class _MyAppState extends State<MyApp> {
                   ),
                   title: Text("Profile", style: bottomBarStyle))
             ],
-          )),
+          )
+      ),
     );
   }
 }
